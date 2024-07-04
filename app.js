@@ -23,24 +23,27 @@ if (estaLogeado == true) {
 
 console.log(usuario);
 
-alert("Gracias por iniciar sesion!");
+alert("Gracias por iniciar sesion " + usuario + "!");
 
 alert("Elija la pelicula");
+
+let peliculas = prompt("(1)Intensamente 2 ó (2)Terminator 1");
 
 let p1 = "Intensamente 2";
 
 let p2 = "Terminator 1";
 
-let peliculas = prompt("Intensamente 2 ó Terminator 1");
+if (p1 == "1") {
+  console.log(p1);
+} else if (p2 == "2") {
+  console.log(p2);
+} else {
+  console.log("la pelicula es valida!");
+}
 
-console.log(p1);
-console.log(p2);
+let dia = prompt("Elija el día de semana de la función (1, 2, 3, 4, 5, 6, 7)");
 
-console.log(peliculas);
-
-let dia = prompt("Elija el día de la función (1, 2, 3, 4, 5, 6, 7)");
-
-if (dia == "1") {
+/* if (dia == "1") {
   console.log("Lunes");
 } else if (dia == "2") {
   console.log("Martes");
@@ -56,6 +59,32 @@ if (dia == "1") {
   console.log("Domingo");
 } else {
   console.log("el numero no es valido");
+} */
+
+switch (dia) {
+  case "1":
+    console.log("Lunes");
+    break;
+  case "2":
+    console.log("Martes");
+    break;
+  case "3":
+    console.log("Miercoles");
+    break;
+  case "4":
+    console.log("Jueves");
+    break;
+  case "5":
+    console.log("Viernes");
+    break;
+  case "6":
+    console.log("Sabado");
+    break;
+  case "7":
+    console.log("Domingo");
+    break;
+  default:
+    console.log("El número no es válido");
 }
 
 let cantidadDeEntradas = Number(
@@ -63,6 +92,7 @@ let cantidadDeEntradas = Number(
 );
 let precioDeEntrada = Number(200);
 console.log(cantidadDeEntradas);
+console.log(precioDeEntrada);
 
 let totalAPagar = cantidadDeEntradas * precioDeEntrada;
 
