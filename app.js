@@ -117,6 +117,43 @@ let candy = ["Gomitas", "Chocolates", "Caramelos", "Cereales", "Helado"];
 
 console.log(candy[candy.length - 1]);
 
+let candyBar = [
+  {
+    id: 1,
+    producto: "Gomitas",
+    precio: 100,
+  },
+  {
+    id: 2,
+    producto: "Chocolates",
+    precio: 200,
+  },
+  {
+    id: 3,
+    producto: "Ceriales",
+    precio: 150,
+  },
+  {
+    id: 4,
+    producto: "Helados",
+    precio: 300,
+  },
+];
+
+let encontrar = (identificador) => {
+  for (let i = 0; i < candyBar.length; i++) {
+    if (candyBar[i].id == identificador) {
+      return candyBar[i];
+    }
+  }
+
+  return false;
+};
+
+let productoEncontrado = encontrar(2);
+
+console.log(productoEncontrado);
+
 console.log("Gracias por su compra!");
 
 function adios() {
