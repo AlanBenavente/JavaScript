@@ -100,7 +100,33 @@ alert("Su total es de " + totalAPagar);
 
 console.log("Su total es de " + totalAPagar);
 
+let intensamente2 = {
+  precio: 200,
+  descripcion: "Infantil",
+  combo: "Pochoclos dulces con gomitas",
+};
+
+console.log(intensamente2);
+
+intensamente2.combo = "Nachos con queso";
+intensamente2.stock = 100;
+
+console.log(intensamente2);
+
+let candy = ["Gomitas", "Chocolates", "Caramelos", "Cereales", "Helado"];
+
+console.log(candy[candy.length - 1]);
+
 console.log("Gracias por su compra!");
+
+function adios() {
+  let adios = "¡Que tengas un buen día!";
+
+  console.log("¡Que tengas un lindo día!");
+}
+
+adios();
+adios();
 
 // let numero = prompt("por favor ingresar numero");
 
