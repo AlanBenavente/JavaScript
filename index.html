@@ -8,7 +8,43 @@
   </head>
 
   <body>
-    <h1 class="titulo">ENTRADAS DE CINE</h1>
+    <h1 class="titulo">CineStar</h1>
+    <h2 id="categorias">Categorias</h2>
+    <div class="estrenos">
+      <h2>Generos</h2>
+      <h3>Acción</h3>
+      <h3>Terror</h3>
+      <h3>Romance</h3>
+      <h3>Comedia</h3>
+      <h3>Ciencia Ficción</h3>
+    </div>
+
+    <div class="shop">
+      <h2>Golosinas</h2>
+      <button id="botonChocolates">Chocolates</button>
+      <button id="botonGomitas">Gomitas</button>
+      <button id="botonHelados">Helados</button>
+    </div>
+
+    <div class="agregarPelicula">
+      <h2>Agrega tu pelicula!</h2>
+      <input
+        type="text"
+        placeholder="Nombre de la pelicula"
+        id="input-pelicula"
+      />
+
+      <form class="formularioPelicula">
+        <input type="text" placeholder="Genero de la pelicula" id="genero" />
+        <input type="text" placeholder="Estreno de la pelicula" id="estreno" />
+        <button>Agregar</button>
+        <button type="button">Cancelar</button>
+      </form>
+    </div>
+
+    <div class="seriesPopulares">
+      <h2>SERIES MÁS POPULARES</h2>
+    </div>
 
     <script src="./app.js"></script>
   </body>

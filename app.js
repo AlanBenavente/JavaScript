@@ -33,12 +33,12 @@ let p1 = "Intensamente 2";
 
 let p2 = "Terminator 1";
 
-if (p1 == "1") {
+if (peliculas == "1") {
   console.log(p1);
-} else if (p2 == "2") {
+} else if (peliculas == "2") {
   console.log(p2);
 } else {
-  console.log("la pelicula es valida!");
+  console.log("La opción seleccionada no es válida!");
 }
 
 let dia = prompt("Elija el día de semana de la función (1, 2, 3, 4, 5, 6, 7)");
@@ -154,6 +154,8 @@ let productoEncontrado = encontrar(2);
 
 console.log(productoEncontrado);
 
+alert("Gracias por su compra!");
+
 console.log("Gracias por su compra!");
 
 function adios() {
@@ -164,6 +166,120 @@ function adios() {
 
 adios();
 adios();
+
+console.log(document.body);
+
+let categorias = document.getElementById("categorias");
+console.log(categorias);
+
+let contenedorDeEstrenos = document.querySelector(".estrenos");
+contenedorDeEstrenos.innerHTML = `<h3>Animación</h3> 
+<h3>Suspenso</h3> 
+<h3>Drama</h3>
+<h3>Anime</h3>
+`;
+
+console.log(contenedorDeEstrenos);
+
+let botonChocolates = document.getElementById("botonChocolates");
+botonChocolates.onclick = () => {
+  alert("Ricos chocolates!"); // solo uno con alerta
+  botonChocolates.className = "botonChocolates";
+};
+
+let numero = 0;
+
+let botonGomitas = document.getElementById("botonGomitas");
+botonGomitas.addEventListener("click", () => {
+  numero++;
+  let gomitas = " Gomitas";
+  botonGomitas.innerText = numero + gomitas;
+  botonGomitas.className = "botonGomitas";
+});
+
+let numero1 = 0;
+
+let botonHelados = document.getElementById("botonHelados");
+botonHelados.addEventListener("click", () => {
+  numero1++;
+  let helados = " Helados";
+  botonHelados.innerText = numero1 + helados;
+  botonHelados.className = "botonHelados";
+});
+
+// los botones de gomitas y helados, aumentan con cada clic.
+
+let inputFormulario = document.getElementById("input-pelicula");
+
+inputFormulario.addEventListener("keypress", (e) => {});
+console.log(teclas);
+
+let formulario = document.querySelector("form");
+formulario.addEventListener("submit", (event) => {
+  event.preventDefault();
+});
+
+let inputGenero = document.getElementById("genero");
+let inputEstreno = document.getElementById("estreno");
+
+let inputPelicula = "";
+
+inputGenero.addEventListener("input", () => {
+  inputPelicula = inputGenero.value;
+});
+
+console.log(inputGenero);
+console.log(inputEstreno);
+
+const series = [
+  {
+    id: 1,
+    titulo: "Dragon Ball",
+    episodios: "300 episodios",
+    descripcion: "Busca las esferas del dragón junto a Goku y sus amigos!",
+  },
+  {
+    id: 2,
+    titulo: "Gambito de Dama",
+    episodios: "50 episodios",
+    descripcion: "Una protagonista experta en el ajedrez.",
+  },
+  {
+    id: 3,
+    titulo: "Juego de Tronos",
+    episodios: "100 episodios",
+    descripcion: "Una aventura peligrosa con caballeros y dragones!",
+  },
+  {
+    id: 4,
+    titulo: "Pokemon",
+    episodios: "200 episodios",
+    descripcion: "Se un maestro Pokemon, atrapalos a todos!",
+  },
+];
+
+console.log(series);
+
+let contenedorSeries = document.createElement("div");
+document.body.append(contenedorSeries);
+
+for (let i = 0; i < series.length; i++) {
+  const serieDiv = document.createElement("div");
+  serieDiv.innerHTML = `<h2>${series[i].titulo}</h2>
+<h3>${series[i].episodios}</h3> 
+<h4>${series[i].descripcion}</h4>
+`;
+  serieDiv.className = "series";
+  contenedorSeries.appendChild(serieDiv);
+}
+
+let descargas = document.createElement("h2");
+descargas.innerHTML = `<h2>Descargas</h2>
+`;
+descargas.className = "descargas";
+contenedorSeries.appendChild(descargas);
+
+console.log(contenedorSeries);
 
 // let numero = prompt("por favor ingresar numero");
 
